@@ -1,0 +1,35 @@
+<div class="row mt-4">
+    <div class="col-md-3">
+        <%- include('../partials/admin_sidebar') %>
+    </div>
+    
+    <div class="col-md-9">
+        <h2>Admin Dashboard</h2>
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card text-white bg-primary mb-3 shadow">
+                    <div class="card-header">Total Users</div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center display-4"><%= stats.userCount %></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-white bg-success mb-3 shadow">
+                    <div class="card-header">Total Items</div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center display-4"><%= stats.itemCount %></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-dark bg-warning mb-3 shadow">
+                    <div class="card-header">Pending Approvals</div>
+                    <div class="card-body">
+                        <h4 class="card-title text-center display-4"><%= stats.pendingItemsCount %></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

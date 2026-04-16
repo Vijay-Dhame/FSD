@@ -1,0 +1,50 @@
+<div class="row justify-content-center mt-4">
+    <div class="col-md-8">
+        <div class="card shadow">
+            <div class="card-header bg-success text-white">
+                <h3 class="mb-0">Sell an Item</h3>
+            </div>
+            <div class="card-body">
+                <form action="/items" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required maxlength="100" placeholder="E.g., Honda Civic 2018 or iPhone 13">
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="price" class="form-label">Price ($)</label>
+                            <input type="number" class="form-control" id="price" name="price" required min="0" step="0.01">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="category" class="form-label">Category</label>
+                            <select class="form-select" id="category" name="category" required>
+                                <option value="" disabled selected>Select category...</option>
+                                <option value="Cars">Cars</option>
+                                <option value="Bikes">Bikes</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="5" required maxlength="1000" placeholder="Provide details about the condition, history, etc."></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="image" class="form-label">Upload Image (optional, max 5MB, JPG/PNG only)</label>
+                        <input class="form-control" type="file" id="image" name="image" accept="image/jpeg, image/png, image/gif">
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <a href="/items" class="btn btn-secondary">Cancel</a>
+                        <button type="submit" class="btn btn-success px-4">Post Listing</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

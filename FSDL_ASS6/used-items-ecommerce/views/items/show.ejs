@@ -1,0 +1,65 @@
+<div class="mt-4">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/items">Items</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><%= item.title %></li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4 shadow-sm">
+                <% if(item.imageUrl === 'no-photo.jpg') { %>
+                    <div class="bg-secondary text-white text-center d-flex align-items-center justify-content-center" style="height: 400px;">
+                        <span>No Image Available</span>
+                    </div>
+                <% } else { %>
+                    <img src="/uploads/<%= item.imageUrl %>" class="card-img-top" alt="<%= item.title %>" style="max-height: 500px; object-fit: contain; background: #f8f9fa;">
+                <% } %>
+                <div class="card-body">
+                    <h2 class="card-title"><%= item.title %></h2>
+                    <h4 class="text-primary mb-3">$<%= item.price %></h4>
+                    <span class="badge bg-secondary mb-3"><%= item.category %></span>
+                    
+                    <h5>Description</h5>
+                    <p class="card-text" style="white-space: pre-wrap;"><%= item.description %></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h5 class="mb-0">Seller Information</h5>
+                </div>
+                <div class="card-body">
+                    <% if(item.seller) { %>
+                        <p><strong>Name:</strong> <%= item.seller.name %></p>
+                        <% if(user) { %>
+                            <p><strong>Email:</strong> <a href="mailto:<%= item.seller.email %>"><%= item.seller.email %></a></p>
+                            <a href="mailto:<%= item.seller.email %>" class="btn btn-primary w-100 mt-2">Contact Seller</a>
+                        <% } else { %>
+                            <div class="alert alert-warning">
+                                Please <a href="/auth/login">login</a> to see contact info and reach out to the seller.
+                            </div>
+                        <% } %>
+                    <% } else { %>
+                        <p>Seller information unavailable.</p>
+                    <% } %>
+                </div>
+            </div>
+
+            <% if(user) { %>
+            <div class="card shadow-sm">
+                <div class="card-body p-2">
+                    <form action="/user/wishlist/<%= item._id %>" method="POST">
+                        <button type="submit" class="btn btn-outline-danger w-100">
+                            ♥ Add to Wishlist
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</div>

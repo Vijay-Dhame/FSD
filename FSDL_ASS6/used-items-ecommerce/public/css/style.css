@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navbar Enhancements */
+.navbar {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: #f8d210 !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    box-shadow: 0 10px 30px rgba(118, 75, 162, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+    transform: rotate(45deg);
+}
+
+/* Cards Enhancements */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+.card-header {
+    border-bottom: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    border: none;
+}
+.btn-primary:hover {
+    background: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+    box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+    transform: translateY(-2px);
+}
+.btn-success {
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    border: none;
+    color: #1a1a1a;
+}
+.btn-success:hover {
+    background: linear-gradient(to right, #38f9d7 0%, #43e97b 100%);
+    color: #1a1a1a;
+    box-shadow: 0 5px 15px rgba(67, 233, 123, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Utilities */
+.text-truncate-multi {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: normal;
+}
+
+/* Badge Tweaks */
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Inputs and Forms */
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e0e0e0;
+    background-color: #fcfcfc;
+    transition: all 0.2s;
+}
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.25);
+    border-color: #4facfe;
+    background-color: #fff;
+}

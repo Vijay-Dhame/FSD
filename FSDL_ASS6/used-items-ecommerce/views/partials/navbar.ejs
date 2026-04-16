@@ -1,0 +1,51 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+        <i class="fa-solid fa-gem text-warning me-2"></i> SecondKart
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link" href="/items">
+            <i class="fa-solid fa-magnifying-glass me-1"></i> Browse Items
+          </a>
+        </li>
+        <% if(user) { %>
+          <li class="nav-item ms-lg-2 mb-2 mb-lg-0">
+            <a class="btn btn-sm btn-success px-3 py-2 rounded-pill shadow-sm" href="/items/new">
+                <i class="fa-solid fa-plus me-1"></i> Sell Item
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/user/dashboard">
+                <i class="fa-solid fa-user me-1"></i> Dashboard
+            </a>
+          </li>
+          <% if(user.role === 'admin') { %>
+            <li class="nav-item">
+              <a class="nav-link text-warning fw-bold" href="/admin/dashboard">
+                <i class="fa-solid fa-shield-halved me-1"></i> Admin Panel
+              </a>
+            </li>
+          <% } %>
+          <li class="nav-item">
+            <a class="nav-link text-white-50 ms-lg-2" href="/auth/logout">
+                <i class="fa-solid fa-right-from-bracket me-1"></i> Logout
+            </a>
+          </li>
+        <% } else { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/login">Login</a>
+          </li>
+          <li class="nav-item ms-lg-2">
+            <a class="btn btn-sm btn-primary px-4 py-2 rounded-pill shadow-sm" href="/auth/register">Sign Up</a>
+          </li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>

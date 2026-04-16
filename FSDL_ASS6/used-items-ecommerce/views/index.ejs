@@ -1,0 +1,54 @@
+<div class="hero-section text-center mb-5">
+    <h1 class="display-3 fw-bold mb-4">Discover Amazing Deals</h1>
+    <p class="lead mb-5" style="font-weight: 300; font-size: 1.25rem;">Buy and sell pre-owned cars, bikes, electronics, and more <br> in a trusted, premium marketplace.</p>
+    
+    <div class="d-flex justify-content-center gap-3 position-relative" style="z-index: 2;">
+        <a href="/items" class="btn btn-light btn-lg px-5 text-primary fw-bold shadow">
+            <i class="fa-solid fa-compass me-2"></i> Browse Items
+        </a>
+        <% if(!user) { %>
+            <a href="/auth/register" class="btn btn-primary btn-lg px-5 shadow border-0" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);">
+                <i class="fa-solid fa-user-plus me-2"></i> Join Now
+            </a>
+        <% } else { %>
+            <a href="/items/new" class="btn btn-success btn-lg px-5 shadow">
+                <i class="fa-solid fa-tags me-2"></i> Start Selling
+            </a>
+        <% } %>
+    </div>
+</div>
+
+<div class="row g-4 mt-2">
+    <div class="col-md-4">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm bg-white" style="border-radius: 20px;">
+            <div class="card-body">
+                <i class="fa-solid fa-car-side fa-3x text-primary mb-3"></i>
+                <h4 class="fw-bold">Cars & Bikes</h4>
+                <p class="text-muted">Find the best deals on premium pre-owned vehicles. Inspected and verified sellers.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm bg-white" style="border-radius: 20px;">
+            <div class="card-body">
+                <i class="fa-solid fa-laptop fa-3x text-success mb-3"></i>
+                <h4 class="fw-bold">Electronics</h4>
+                <p class="text-muted">Upgrade your gadgets for less. Laptops, smartphones, and gaming consoles.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm bg-white" style="border-radius: 20px;">
+            <div class="card-body">
+                <i class="fa-solid fa-couch fa-3x text-warning mb-3"></i>
+                <h4 class="fw-bold">Furniture</h4>
+                <p class="text-muted">Furnish your entire home affordably with gently used, high-quality furniture.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-5 mb-3">
+    <h3 class="fw-bold">Why Choose Us?</h3>
+    <p class="text-muted">Thousands of users trust us daily for their buying and selling needs.</p>
+</div>
