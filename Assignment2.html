@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vijay Dhame | Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        /* Navbar */
+        nav {
+            background: #111;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00e6e6;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .profile {
+            width: 140px;
+            border-radius: 50%;
+            border: 3px solid #00e6e6;
+        }
+
+        h1 {
+            margin: 10px;
+        }
+
+        /* Sliding text animation */
+        .slide {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .slide span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: slide 12s linear infinite;
+            color: #00e6e6;
+            font-weight: bold;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+
+        /* Section cards */
+        section {
+            background: rgba(255,255,255,0.05);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px black;
+        }
+
+        h2 {
+            color: #00e6e6;
+        }
+
+        ul {
+            line-height: 1.8;
+        }
+
+        /* Skills badges */
+        .skill {
+            display: inline-block;
+            background: #00e6e6;
+            color: black;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #111;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Education</a>
+    <a href="#">Contact</a>
+</nav>
+
+<!-- Header -->
+<header>
+    <img src="C:\Users\vijay\OneDrive\Projcect\Web Developement\node_modules\vijayphoto.jpeg" class="profile">
+
+    <h1>Vijay Dhame</h1>
+    <p>Computer Engineering Student | AI • ML • Data Science</p>
+
+    <!-- Sliding Text -->
+    <div class="slide">
+        <span>Machine Learning • Deep Learning • Python • Data Science • AI Developer • Problem Solver • Innovation</span>
+    </div>
+</header>
+
+<!-- About -->
+<section>
+    <h2>About Me</h2>
+    <p>
+        Motivated Computer Engineering student passionate about Artificial Intelligence, Machine Learning,
+        and Data Science. Experienced in building data-driven solutions using Python, SQL, and ML models.
+    </p>
+</section>
+
+<!-- Skills -->
+<section>
+    <h2>Skills</h2>
+
+    <span class="skill">C</span>
+    <span class="skill">C++</span>
+    <span class="skill">Python</span>
+    <span class="skill">SQL</span>
+    <span class="skill">Machine Learning</span>
+    <span class="skill">Deep Learning</span>
+    <span class="skill">Pandas</span>
+    <span class="skill">NumPy</span>
+    <span class="skill">Scikit-learn</span>
+    <span class="skill">MongoDB</span>
+</section>
+
+<!-- Projects -->
+<section>
+    <h2>Projects</h2>
+    <ul>
+        <li><b>Airbnb Chicago Data Analysis</b> – Performed EDA and visualization to analyze pricing and availability.</li>
+        <li><b>House Price Prediction</b> – Built regression ML model for predicting housing prices.</li>
+        <li><b>Customer Churn Prediction</b> – Classification ML model for business decision support.</li>
+    </ul>
+</section>
+
+<!-- Education -->
+<section>
+    <h2>Education</h2>
+    <ul>
+        <li>B.E. Computer Engineering – PCCOE Pune (2023–2027)</li>
+        <li>Higher Secondary – CET 98.78%</li>
+        <li>Secondary Education – 94.80%</li>
+    </ul>
+</section>
+
+<!-- Achievements -->
+<section>
+    <h2>Achievements & Certifications</h2>
+    <ul>
+        <li>1st Prize – College Machine Learning Competition</li>
+        <li>Google Data Analytics Professional Certificate</li>
+        <li>Deep Learning Certification</li>
+        <li>SQL Certification – Simplilearn</li>
+    </ul>
+</section>
+
+<!-- Contact -->
+<section>
+    <h2>Contact</h2>
+    <p>Email: vijaydhame79@gmail.com</p>
+    <p>Mobile: 9021891022</p>
+</section>
+
+<footer>
+    © 2026 Vijay Dhame | AI & ML Portfolio
+</footer>
+
+</body>
+</html>
