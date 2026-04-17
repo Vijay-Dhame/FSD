@@ -1,0 +1,37 @@
+<%- include('./partials/header.ejs') %>
+
+<section class="contact-page">
+  <div class="form-container glass">
+    <h2>Contact Us</h2>
+    <p>We'd love to hear from you. Send us a message and we'll respond shortly.</p>
+    
+    <script>
+      // Simple script to check if there is a success query param
+      const urlParams = new URLSearchParams(window.location.search);
+      if(urlParams.get('success')) {
+        document.write('<div class="alert success">Your message has been sent successfully!</div>');
+      }
+    </script>
+
+    <form action="/contact" method="POST" class="standard-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="John Doe">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="john@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="How can we help you?"></textarea>
+      </div>
+
+      <button type="submit" class="btn primary-btn full-width">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<%- include('./partials/footer.ejs') %>
